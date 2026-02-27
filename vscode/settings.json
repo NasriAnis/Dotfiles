@@ -1,0 +1,125 @@
+{
+    "chat.commandCenter.enabled": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.nextEditSuggestions.fixes": false,
+    "editor.quickSuggestions": {},
+    "editor.suggest.selectionMode": "never",
+    "settingsSync.ignoredExtensions": [],
+    "editor.inlineSuggest.edits.showCollapsed": true,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+
+    "files.autoSave": "afterDelay",
+    "git.confirmSync": false,
+    "debug.onTaskErrors": "showErrors",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-x>": false,
+        "<C-z>": false,
+        "<C-s>": false
+    },
+
+    "workbench.iconTheme": "vscode-icons",
+    "git.autofetch": true,
+    "[markdown]": {
+        
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+
+    "python.defaultInterpreterPath": "/bin/python3",
+    "security.workspace.trust.untrustedFiles": "open",
+    "asm-code-lens.enableFindAllReferences": false,
+    "asm-code-lens.enableCodeLenses": false,
+    "workbench.colorTheme": "GitHub Dark Default",
+
+    "workbench.colorCustomizations": {
+        "editor.background": "#050505",
+        "editor.foreground": "#d6d6d6",
+
+        "sideBar.background": "#0b0b0b",
+        "sideBar.foreground": "#cfcfcf",
+
+        "sideBarSectionHeader.background": "#101010",
+        "sideBarSectionHeader.foreground": "#d6d6d6",
+
+        "list.activeSelectionBackground": "#151515",
+        "list.hoverBackground": "#121212",
+
+        "tree.indentGuidesStroke": "#1f1f1f",
+
+
+        "activityBar.background": "#050505",
+        "activityBar.border": "#0a0a0a",
+
+        "statusBar.background": "#050505",
+        "statusBar.border": "#0a0a0a",
+
+        "titleBar.activeBackground": "#050505",
+        "titleBar.inactiveBackground": "#050505",
+
+        "panel.background": "#050505",
+        "terminal.background": "#050505",
+
+        "editorLineNumber.foreground": "#333333",
+        "editorLineNumber.activeForeground": "#8a8a8a",
+
+        "editor.selectionBackground": "#1a1a1a",
+        "editor.inactiveSelectionBackground": "#1a1a1a00",
+
+        "editorCursor.foreground": "#ffffff",
+        "focusBorder": "#000000"
+    },
+
+    "editor.tokenColorCustomizations": {
+        "comments": "#5c6370",
+        "keywords": "#c678dd",
+        "strings": "#98c379",
+        "functions": "#61afef",
+        "variables": "#e06c75",
+        "numbers": "#d19a66",
+        "types": "#56b6c2"
+    },
+    "keyboard.dispatch": "keyCode",
+    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', monospace",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "'JetBrains Mono'",
+    "chat.viewSessions.orientation": "stacked",
+    "redhat.telemetry.enabled": false,
+    "files.associations": {
+        "*.{a80,z80,asm,inc,s}": "asm-collection",
+        "*.{list,lis}": "asm-collection-list"
+    },
+    "editor.parameterHints.enabled": false,
+    "debug.disassemblyView.showSourceCode": false,
+    "githubPullRequests.createOnPublishBranch": "never",
+
+}

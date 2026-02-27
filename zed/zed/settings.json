@@ -1,0 +1,75 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent_buffer_font_size": 14.0,
+  "agent_ui_font_size": 16.0,
+  "ui_font_weight": 400.0,
+  "show_edit_predictions": false,
+  "edit_predictions": {
+    "mode": "subtle",
+    "provider": "copilot"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
+      "enable_thinking": false
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+    "enable_feedback": false
+  },
+  "cursor_shape": "bar",
+  "buffer_line_height": "standard",
+  "colorize_brackets": false,
+  "indent_guides": {
+    "background_coloring": "disabled"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "terminal": {
+    "font_family": "JetBrains Mono"
+  },
+  "base_keymap": "VSCode",
+  "show_signature_help_after_edits": false,
+  "auto_signature_help": false,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_font_fallbacks": [
+    "Droid Sans Mono",
+    "monospace"
+  ],
+  "buffer_font_family": "JetBrains Mono",
+  "file_types": {
+    "asm-collection": [
+      "*.{a80,z80,asm,inc,s}"
+    ],
+    "asm-collection-list": [
+      "*.{list,lis}"
+    ]
+  },
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Pure Black",
+  },
+  
+    "disable_ai": true
+}
