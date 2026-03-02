@@ -1,13 +1,13 @@
 return {
   { "folke/tokyonight.nvim", enabled = false },
-  
+
   {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
     opts = {
-      flavour = "mocha",
-      transparent_background = true,  -- This makes it transparent
+      flavour = "macchiato",
+      transparent_background = true, -- This makes it transparent
       integrations = {
         cmp = true,
         gitsigns = true,
@@ -18,23 +18,30 @@ return {
       },
     },
   },
-  
+
   {
     "rebelot/kanagawa.nvim",
     priority = 1000,
     opts = {
       theme = "dragon",
-      transparent = true,  -- This makes it transparent
+      transparent = true, -- This makes it transparent
       background = {
         dark = "dragon",
       },
     },
   },
-  
+
+  {
+    "Mofiqul/dracula.nvim",
+    priority = 1000,
+    opts = {
+      transparent_bg = true,
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "dracula",
     },
   },
 }
