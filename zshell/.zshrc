@@ -172,26 +172,50 @@ batlimit() {
 
 batfull() {
   sudo tee /sys/class/power_supply/BAT0/charge_control_start_threshold <<< 0   >/dev/null
-  sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold   <<< 90 >/dev/null
+  sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold   <<< 85 >/dev/null
   echo "🔌 Battery limit disabled (0% → 100%)"
 }
 
+batnoc() {
+  sudo tee /sys/class/power_supply/BAT0/charge_control_start_threshold <<< 101 >/dev/null
+  sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold   <<< 101 >/dev/null
+  echo "⛔ Battery charging disabled"
+}
+
+zle_highlight=('paste:none')
 
 # =========================
 # NVM - Lazy Load (fast)
 # =========================
-export NVM_DIR="$HOME/.nvm"
+# export NVM_DIR="$HOME/.nvm"
 
 # Lazy load nvm - only loads when you first call nvm, node, npm, npx, etc.
-nvm() {
-    unset -f nvm node npm npx yarn pnpm
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-    nvm "$@"
-}
-node() { nvm; node "$@"; }
-npm()  { nvm; npm "$@"; }
-npx()  { nvm; npx "$@"; }
-yarn() { nvm; yarn "$@"; }
-pnpm() { nvm; pnpm "$@"; }
+#nvm() {
+#    unset -f nvm node npm npx yarn pnpm
+#    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+#    nvm "$@"
+#}
+#node() { nvm; node "$@"; }
+#npm()  { nvm; npm "$@"; }
+#npx()  { nvm; npx "$@"; }
+#yarn() { nvm; yarn "$@"; }
+#pnpm() { nvm; pnpm "$@"; }
 
+
+# Fast NVM Lazy Loader (No loops, no freezing)
+export NVM_DIR="$HOME/.nvm"
+
+lazy_load_nvm() {
+  unset -f node npm npx gemini  # Add 'gemini' here
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+
+# These "aliases" trigger the loader the first time you use them
+node() { lazy_load_nvm; node "$@"; }
+npm() { lazy_load_nvm; npm "$@"; }
+npx() { lazy_load_nvm; npx "$@"; }
+gemini() { lazy_load_nvm; gemini "$@"; }
+export LS_COLORS='di=1;34:ln=1;36:ex=1;32:fi=0;37'
+export KITTY_SHELL_INTEGRATION="enabled"
