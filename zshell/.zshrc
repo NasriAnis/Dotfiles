@@ -41,6 +41,7 @@ ZSH_THEME="bira-local3"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
+DISABLE_MAGIC_FUNCTIONS=true
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
@@ -157,6 +158,7 @@ fi
 ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
 
 alias ll='ls -lah'
+alias vi='nvim'
 export PATH=$HOME/.local/bin:$PATH
 
 alias docker-disable='sudo systemctl stop docker.socket && sudo systemctl disable docker.socket && sudo systemctl stop docker && sudo systemctl disable docker && sudo systemctl stop containerd && sudo systemctl disable containerd'
