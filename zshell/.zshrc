@@ -19,6 +19,8 @@ ZSH_THEME="bira-local3"
 # Uncomment the following line to use case-sensitive completion.
 #CASE_SENSITIVE="true"
 
+export EDITOR=nvim
+
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -38,9 +40,15 @@ ZSH_THEME="bira-local3"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
+#autoload -Uz add-zsh-hook
+#add-zsh-hook precmd  _kitty_tab_title
+#add-zsh-hook preexec _kitty_tab_cmd
 
+#_kitty_tab_title() { print -Pn "\e]0;%1~\a" }           # shows current dir
+#_kitty_tab_cmd()   { print -Pn "\e]0;$1\a" }            # shows command e.g. nvim
 # Uncomment the following line to enable command auto-correction.
+
 DISABLE_MAGIC_FUNCTIONS=true
 ENABLE_CORRECTION="true"
 
@@ -185,6 +193,8 @@ batnoc() {
 }
 
 zle_highlight=('paste:none')
+bindkey -v
+bindkey "^?" backward-delete-char
 
 # =========================
 # NVM - Lazy Load (fast)
@@ -219,5 +229,12 @@ node() { lazy_load_nvm; node "$@"; }
 npm() { lazy_load_nvm; npm "$@"; }
 npx() { lazy_load_nvm; npx "$@"; }
 gemini() { lazy_load_nvm; gemini "$@"; }
-export LS_COLORS='di=1;34:ln=1;36:ex=1;32:fi=0;37'
+
+
+#export LS_COLORS='di=1;34:ln=1;36:ex=1;32:fi=0;37'
 export KITTY_SHELL_INTEGRATION="enabled"
+eval "$(zoxide init zsh)"
+alias ollama='/media/anis/TOSHIBA/ollama/run.sh'
+
+
+

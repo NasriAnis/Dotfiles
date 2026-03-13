@@ -46,3 +46,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+
+vim.opt.wrap = true
+vim.opt.linebreak = true  -- wrap at word boundaries, not mid-word
